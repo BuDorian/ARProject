@@ -44,6 +44,7 @@ public class ARMoveblePoint : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(mouse);
             Vector3 rayPoint = ray.GetPoint(distance);
             transform.localPosition = rayPoint + starDist;
+            transform.localPosition = new Vector3(transform.localPosition.x, 0.1f, transform.localPosition.z);
         }
     }
 }
